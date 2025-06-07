@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fishing Trips</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="احجز أفضل رحلات الصيد واليخوت معنا. تجربة ممتعة ومميزة في البحر لجميع أفراد العائلة.">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @theme {
+          --color-clifford: #da373d;
+        }
+      </style>
+</head>
+<body class="main overflow-x-hidden">
+  
+  <div id="overlay" class="hidden fixed inset-0 z-10 backdrop-blur-sm bg-black bg-opacity-30 transition-opacity duration-300 overflow-x-hidden"></div>
+    
+<nav id="main-nav" class="bg-transparent p-4 p-4 sm:p-4 md:px-4 lg:px-12 px-0 z-20 fixed top-0 left-0 w-full transition duration-300 overflow-x-hidden">
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="text-white font-bold text-3xl text-logo">
+          Ahm <span class="text-blue-500">ED</span>
+        </div>
+    
+        <div>
+          <button id="menu-btn" class="text-white focus:outline-none z-30 relative pr-4 sm:pr-4 md:pr-4 lg:pr-0">
+            <svg id="icon-open" class="w-8 h-8 block" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-gray-800 text-white text-2xl transform -translate-x-full transition-transform duration-300 z-20 ">
+      <ul class="p-6 space-y-10">
+        <div class="text-white font-bold text-2x1 ">
+          Ahm <span class="text-blue-500">ED</span>
+        </div>
+        <li><a href="#home" class="hover:text-gray-300 block">Home</a></li>
+        <li><a href="#about" class="hover:text-gray-300 block">Our Gallery</a></li>
+        <li><a href="#Services" class="hover:text-gray-300 block">Our Packages</a></li>
+        <li><a href="#contact" class="hover:text-gray-300 block">Contact</a></li>
+      </ul>
+    </div>
+  
+
+    <section class="relative h-screen w-full overflow-x-hidden" id="home">
+
+      <video autoplay muted loop playsinline preload="auto" loading="lazy" class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="images/rock_-_15527 (1080p).mp4" type="video/mp4" />
+        <source src="images/rock_-_15527 (1080p).mp4" type="video/webm">
+
+        متصفحك لا يدعم الفيديو.
+      </video>
+    
+      <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center bg-black bg-opacity-10">
+        <h1 class="text-2xl sm:text-xs md:text-3xl lg:text-6xl font-bold family">
+          FAMILY TRADITION
+        </h1>
+        <p class="text-sm sm:text-base md:text-lg lg:text-2xl xl:text-3xl before-line">
+          Plan Your Trip With Us
+        </p>
+                <div class="flex flex-col  icon-p ">
+          <a href="https://www.facebook.com/ahmedanany.393/"><i class="fa-brands fa-facebook-f text-lg sm:text-base md:text-lg lg:text-2xl xl:text-3xl icon1"></i></a>
+           <a href="https://wa.me/qr/EK3TXOGHM3N7P1"><i class="fa-brands fa-whatsapp text-lg sm:text-base md:text-lg lg:text-2xl xl:text-3xl icon2"></i></a>  
+        </div>
+      </div>
+
+    </section>
+    <!-- ===================== -->
+
+     <section class="bg-cyan-950 py-16 px-8 text-white overflow-x-hidden" id="about">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3">Our Gallery</h2>
+      <p class="text-gray-300 text-justify" >
+           Discover the creativity behind every shot! Our gallery showcases real projects, happy moments, and powerful visuals that reflect our passion for excellence and attention to detail.
+
+      </p>
+    </div>
+
+    <div class="px-2 sm:px-6 md:px-10 lg:px-16 xl:px-32 py-1">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 auto-rows-fr gallary">
+          <div class="sm:col-span-2 sm:row-span-2 relative group rounded-md overflow-hidden text-center">
+            <img src="images/AdobeStock_171454970_Preview.webp" alt="image" loading="lazy" class="w-full h-full object-cover rounded-md text-center" />
+          
+            <div class="big-img absolute inset-0 flex flex-col items-center justify-center text-white text-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4">
+          
+              <div class="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ">
+                <h2 class="text-2xl sm:text-4xl font-bold mb-3">Welcome in website</h2>
+                <p>We offer you great services in fishing, yachting, and water areas</p>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class=" relative group rounded-md overflow-hidden">
+            <img src="images/Div2.webp" alt="image" loading="lazy" class="max-w-3xs h-full object-cover rounded-md" />
+          
+            <div class="big-img absolute inset-0 flex flex-col items-center justify-center text-white text-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4">
+          
+              <div class="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                <h2 class="text-2xl sm:text-2xl font-bold mb-3">Welcome in website</h2>
+                <p>We offer you great services in fishing, yachting, and water areas</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class=" relative group rounded-md overflow-hidden">
+            <img src="images/fishing-Road-in-Sea.webp" alt="image" loading="lazy" class="max-w-3xs h-full object-cover rounded-md" />
+          
+            <div class="big-img absolute inset-0 flex flex-col items-center justify-center text-white text-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4">
+          
+              <div class="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                <h2 class="text-2xl sm:text-2xl font-bold mb-3">Welcome in website</h2>
+                <p>We offer you great services in fishing, yachting, and water areas</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class=" relative group rounded-md overflow-hidden">
+            <img src="images/zoom-fishing-Rood.webp" alt="image" loading="lazy" class="max-w-3xs h-full object-cover rounded-md" />
+          
+            <div class="big-img absolute inset-0 flex flex-col items-center justify-center text-white text-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4">
+          
+              <div class="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                <h2 class="text-2xl sm:text-2xl font-bold mb-3">Welcome in website</h2>
+                <p>We offer you great services in fishing, yachting, and water areas</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class=" relative group rounded-md overflow-hidden">
+            <img src="images/footer.webp" alt="image" loading="lazy" class="max-w-3xs h-full object-cover rounded-md" />
+          
+            <div class="big-img absolute inset-0 flex flex-col items-center justify-center text-white text-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4">
+          
+              <div class="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                <h2 class="text-2xl sm:text-2xl font-bold mb-3">Welcome in website</h2>
+                <p>We offer you great services in fishing, yachting, and water areas</p>
+              </div>
+              
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      
+  </section>
+  <!-- =============== -->
+
+  <section class="bg-sky-950 py-16 px-8 text-white overflow-x-hidden" id="Services">
+    <div class="text-center max-w-lg mx-auto mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3">Our Packages
+      </h2>
+      <p class="text-gray-300 text-justify" >
+           Choose the perfect package that fits your needs. Whether you're launching a personal brand or growing a business, our plans offer professional design, full support, and great value to help you succeed online. Let’s build something amazing together!
+      </p>
+    </div>
+    <div class="max-w-3xl mx-auto space-y-16">
+  <!-- Section 1 -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="card max-w-lg" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3">Package 1</h2>
+      <p class="mb-4 text-justify">
+           Perfect for startups! Get a clean, modern design, 1-month free hosting, and 24/7 support to kick-start your online presence.
+      </p>
+      <a href="#" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
+         hover:bg-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 
+         focus-visible:outline-cyan-600 transition duration-500 ease-in-out">
+        Book Now
+      </a>
+    </div>
+
+    <div class="card max-w-sm" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+      <img src="images/Gist.webp" class="rounded-md w-full" alt="package1" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="card max-w-sm" data-aos="fade-right" data-aos-duration="900" data-aos-once="true">
+      <img src="images/Package2.webp" class="rounded-md w-full" alt="Package2" loading="lazy">
+    </div>
+
+    <div class="card max-w-lg" data-aos="fade-left" data-aos-duration="900" data-aos-once="true">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3">Package 2</h2>
+      <p class="mb-4 text-justify">
+           Upgrade your brand with advanced features like SEO optimization, fast performance, and social media integration – ideal for growing businesses.
+      </p>
+      <a href="#" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
+         hover:bg-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 
+         focus-visible:outline-cyan-600 transition duration-500 ease-in-out">
+        Book Now
+      </a>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="card max-w-lg" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3">Package 3</h2>
+      <p class="mb-4 text-justify">
+         Go premium with a fully customized website, priority support, and in-depth analytics. This package is built for businesses that want to lead and dominate their market.
+      </p>
+      <a href="#" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
+         hover:bg-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 
+         focus-visible:outline-cyan-600 transition duration-500 ease-in-out">
+        Book Now
+      </a>
+    </div>
+
+    <div class="card max-w-sm" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+      <img src="images/package3.webp" class="rounded-md w-full" alt="package3" loading="lazy">
+    </div>
+  </div>
+</div>
+
+        
+        
+      
+  </section>
+    
+    <section class="bg-sky-950 py-8 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-24 text-white overflow-x-hidden">
+       <div class="text-center max-w-lg mx-auto mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3">Our Happy Clients
+      </h2>
+      <p class="text-gray-300 text-justify" >
+            We are proud to have worked with a diverse range of clients who trust us to bring their ideas to life. Their satisfaction and positive feedback drive us to keep delivering outstanding results. Your success is our biggest achievement!
+      </p>
+    </div>
+
+   <div class="flex flex-col sm:flex-row justify-around items-center flex-wrap gap-4 px-8 py-2">
+     <div class="card max-w-xs px-4 text-center border-4 border-purple-900 rounded-lg drop-shadow-[0_4px_6px_rgba(76,29,149,0.5)] py-4"  data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+      <img src="images/man3.jpg" class="w-12 h-12 rounded-full block mx-auto" alt="clint-img" loading="lazy">
+      <h2 class="mb-2 text-lg sm:text-2xl">Ahmed Khalil</h2>
+      <div class="mb-1">
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      </div>
+     
+      <p class="text-justify">
+      Very professional and timely delivery. I appreciated the clear communication throughout the project. Would definitely work with them again.
+      </p>
+    </div>
+     <div class="card max-w-xs  px-4 text-center border-4 border-purple-900 rounded-lg drop-shadow-[0_4px_6px_rgba(76,29,149,0.5)] py-4" data-aos="fade-up" data-aos-duration="900" data-aos-once="true">
+      <img src="images/download.jpg" class="w-12 h-12 rounded-full block mx-auto" alt="clint-img" loading="lazy">
+      <h2 class="mb-2 text-lg sm:text-2xl">Sara Collins</h2>
+      <div class="mb-1">
+      <i class="fa-regular fa-star"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      </div>
+     
+      <p class="text-justify"> 
+         Excellent service from start to finish. The team was attentive, responsive, and delivered a product that perfectly matched my vision.
+      </p>
+    </div>
+     <div class="card max-w-xs px-4 text-center border-4 border-purple-900 rounded-lg drop-shadow-[0_4px_6px_rgba(76,29,149,0.5)] py-4" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+      <img src="images/woman.jpg" class="w-12 h-12 rounded-full block mx-auto" alt="clint-img" loading="lazy">
+      <h2 class="mb-2 text-lg sm:text-2xl">Emily Roberts</h2>
+      <div class="mb-1">
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      <i class="fa-solid fa-star text-purple-600"></i>
+      </div>
+     
+      <p class="text-justify">
+         Outstanding experience! The final product was delivered on time and exceeded all my expectations. The team’s dedication truly shows.
+      </p>
+    </div>
+
+   
+
+
+
+
+
+   </div>
+    </section>
+
+   
+<section class="min-h-screen flex items-center justify-center bg-sec px-4 sm:px-6 lg:px-8 bg-sec overflow-x-hidden" id="contact">
+  <div class="relative w-full max-w-md rounded-xl overflow-hidden shadow-lg">
+
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+      <source src="images/waves_-_22183 (540p).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+    <form class="relative z-10 p-6 sm:p-8 text-white space-y-4">
+      <h2 class="text-2xl font-bold text-center mb-4">Contact Us</h2>
+
+      <input type="text" placeholder="Enter Your Name" class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none py-2" />
+      <input type="email" placeholder="Enter Your Email" class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none py-2" />
+      <input type="tel" placeholder="Phone Number" class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none py-2" />
+      <textarea placeholder="Send Message" class="w-full bg-transparent border border-white rounded-md placeholder-white focus:outline-none py-2 px-3 resize-none h-32"></textarea>
+
+     <div class=" flex items-center justify-center">
+  <button type="submit" class="w-auto bg-white text-black font-semibold py-2 px-10 rounded-md hover:bg-cyan-700 hover:text-white transition duration-300">
+    Submit
+  </button>
+</div>
+
+
+    </form>
+  </div>
+</section>
+<button id="toTopBtn" class="hidden fixed bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full shadow-lg overflow-x-hidden">
+  ↑
+</button>
+<footer>
+  <h5 class="bg-sky-950 text-blue-500 px-4 py-1.5">Developed With Love by <a href="https://www.facebook.com/ahmedanany.393/">Ahmed Anani </a>@2025</h5>
+</footer>
+
+
+
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
