@@ -1,0 +1,143 @@
+ *{
+    font-family:'Times New Roman', Times, serif;
+    font-display: swap;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+  overflow-x: hidden;
+}
+
+
+.family{
+    margin-top: 15%;
+}
+.before-line{
+    margin-top: 7rem;
+}
+.before-line::after {
+    content: "";
+    display: inline-block;
+    width: 16rem;         
+    height: 3px;         
+    background-color: white;
+    margin: 0 0 5px 1rem; 
+}
+
+.icon-p {
+    position: absolute;
+    right: 6rem;
+    bottom: 9rem;
+}
+
+.icon2 {
+    margin-top: 1.5rem;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+
+.icon-p::before {
+    content: "";
+    display: inline-block;
+    width: 3px;         
+    height: 16rem;        
+    background-color: white;
+    margin: 0 0.5rem 1rem auto;  
+}
+
+/* Media query for small screens */
+@media (max-width: 737px) {
+    .icon-p {
+        right: 1rem; /* Reduce distance from the right on smaller screens */
+        bottom: 6rem; /* Adjust the bottom spacing */
+    }
+
+    .icon-p::before {
+        width: 1px;
+        height: 8rem; /* Adjust the height for small screens */
+        /* margin: 0 4rem 1rem 0; Adjust margin */
+    }
+
+    .before-line::after {
+        width: 4rem; /* Reduce width of the line */
+        height: 3px; 
+        margin: 0 0 5px 1rem;
+    }
+
+    .icon2 {
+        margin-top: 1rem; /* Adjust top margin on small screens */
+    }
+}
+
+/* Media query for extra small screens (mobile) */
+@media (max-width: 480px) {
+    .text-logo{
+        margin-left: 1rem;
+    }
+    
+    
+    .icon-p {
+        right: 1rem; /* Even smaller margin on mobile */
+        bottom: 17rem; /* Adjust further for mobile screens */
+    }
+
+    .icon-p::before {
+        width: 3px;
+        height: 8rem; /* Further reduce the line height */
+        margin: 0 0.5rem 2rem auto; 
+    }
+
+    .before-line::after {
+        width: 4rem; /* Further reduce width for smaller screens */
+        height: 3px; 
+        margin: 0 0 5px 1rem;
+    }
+
+    .icon2 {
+        margin-top: 0.5rem; 
+    }
+}
+p{
+    text-align: justify;
+}
+
+
+  .icon-p :hover{
+    cursor: pointer;
+  }
+  .icon1{
+   transition: 0.5 ease;
+   -webkit-transition: 0.5 ease;
+   -moz-transition: 0.5 ease;
+   -ms-transition: 0.5 ease;
+   -o-transition: 0.5 ease;
+}
+  .icon-p .icon1:hover{
+    color: #3131fb;
+  }
+  .icon-p .icon2:hover{
+    color: rgb(68, 241, 111);
+  }
+  .big-img{
+  background: linear-gradient(rgba(208, 208, 208, 0.132), rgb(10, 91, 177));
+
+}
+.bg-sec{
+  background: url(images/GettyImages-149418827-1600x1000-2.webp);
+  background-size: cover;
+}
+.bg-form{
+  background: url(images/imges/footer.jpg) ;
+  background-size: cover;
+}
+
+
+
+
+
+
