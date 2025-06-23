@@ -120,3 +120,57 @@ window.addEventListener("scroll", () => {
 document.getElementById("toTopBtn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+
+    function openModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    function submitBooking(event) {
+      event.preventDefault();
+
+      // Show success message
+      document.getElementById("successMsg").classList.remove("hidden");
+
+      // Reset form fields
+      event.target.reset();
+
+      // Hide modal after 2.5s
+      setTimeout(() => {
+        document.getElementById("successMsg").classList.add("hidden");
+        closeModal();
+      }, 2500);
+    }
+
+
+
+  
+
+  function submitContact(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  // هنا تقدر تبعت البيانات لأي API أو خدمة
+  console.log({ name, email, phone, message });
+
+  // إظهار رسالة النجاح
+  document.getElementById("successMessage").classList.remove("hidden");
+
+  // تفريغ النموذج الصحيح بعد ثانيتين
+  setTimeout(() => {
+    document.getElementById("successMessage").classList.add("hidden");
+    event.target.reset(); // ✅ دي الصح!
+  }, 800);
+}

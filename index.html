@@ -58,9 +58,9 @@
 
     <section class="relative h-screen w-full overflow-x-hidden" id="home">
 
-      <video autoplay muted loop playsinline preload="auto" loading="lazy" class="absolute inset-0 w-full h-full object-cover z-0">
+      <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover z-0">
         <source src="images/rock_-_15527 (1080p).mp4" type="video/mp4" />
-        <source src="images/rock_-_15527 (1080p).mp4" type="video/webm">
+        <source src="images/rock_-_15527 (1080p).mp4" type="video/webm" />
 
         متصفحك لا يدعم الفيديو.
       </video>
@@ -181,11 +181,11 @@
       <p class="mb-4 text-justify">
            Perfect for startups! Get a clean, modern design, 1-month free hosting, and 24/7 support to kick-start your online presence.
       </p>
-      <a href="#" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
+      <button type="button" onclick="openModal()" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
          hover:bg-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 
          focus-visible:outline-cyan-600 transition duration-500 ease-in-out">
         Book Now
-      </a>
+      </button>
     </div>
 
     <div class="card max-w-sm" data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
@@ -204,11 +204,11 @@
       <p class="mb-4 text-justify">
            Upgrade your brand with advanced features like SEO optimization, fast performance, and social media integration – ideal for growing businesses.
       </p>
-      <a href="#" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
+      <button type="button" onclick="openModal()" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
          hover:bg-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 
          focus-visible:outline-cyan-600 transition duration-500 ease-in-out">
         Book Now
-      </a>
+      </button>
     </div>
   </div>
 
@@ -219,11 +219,11 @@
       <p class="mb-4 text-justify">
          Go premium with a fully customized website, priority support, and in-depth analytics. This package is built for businesses that want to lead and dominate their market.
       </p>
-      <a href="#" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
+      <button type="button" onclick="openModal()" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
          hover:bg-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 
          focus-visible:outline-cyan-600 transition duration-500 ease-in-out">
         Book Now
-      </a>
+      </button>
     </div>
 
     <div class="card max-w-sm" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
@@ -232,105 +232,317 @@
   </div>
 </div>
 
-        
+ <!-- Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden justify-center items-center">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-black relative">
+      <button onclick="closeModal()" class="absolute top-2 right-3 text-xl font-bold text-gray-600 hover:text-red-500">&times;</button>
+      <h2 class="text-2xl font-semibold mb-4">Book Your Package</h2>
+      <form onsubmit="submitBooking(event)">
+        <label class="block mb-2 text-sm font-medium">Your Name</label>
+        <input type="text" required class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter your name">
+
+        <label class="block mb-2 text-sm font-medium">Email</label>
+        <input type="email" required class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter your email">
+
+        <label class="block mb-2 text-sm font-medium">Package</label>
+        <select required class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+          <option>Package 1</option>
+          <option>Package 2</option>
+          <option>Package 3</option>
+        </select>
+
+        <button type="submit" class="w-full bg-purple-700 text-white py-2 rounded-md hover:bg-purple-800 transition">Submit Booking</button>
+        <p id="successMsg" class="text-green-600 text-sm mt-2 hidden text-center">✅ Booking submitted successfully!</p>
+      </form>
+    </div>
+  </div>
+
+     
         
       
   </section>
+
+   <section class="bg-sky-950 py-20 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-24 text-white overflow-x-hidden">
+  <div class="text-center max-w-lg mx-auto mb-12">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-3">Our Happy Clients</h2>
+    <p class="text-gray-300 text-justify mb-4">
+      We are proud to have worked with a diverse range of clients who trust us to bring their ideas to life. Their satisfaction and positive feedback drive us to keep delivering outstanding results. Your success is our biggest achievement!
+    </p>
+  </div> 
+
+  <div class="flex flex-wrap justify-center gap-6 p-8 bg-sky-950">
+
+  <!-- Card 1 -->
+  <div class="flip-card w-72 h-96" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+    <div class="flip-inner relative w-full h-full">
+
+      <!-- Front -->
+      <div class="flip-front absolute w-full h-full bg-sky-900 text-white p-6 rounded-xl border border-purple-500 shadow-lg">
+        <img src="images/man3.jpg" class="w-16 h-16 rounded-full mx-auto mb-4" alt="">
+        <h3 class="text-xl font-bold">Ahmed Khalil</h3>
+        <p class="text-sm text-purple-300 mb-4">Project Manager</p>
+        <p class="text-sm text-gray-300 text-justify">
+          Very professional and timely delivery. I appreciated the clear communication throughout the project.
+        </p>
+      </div>
+
+      <!-- Back -->
+      <div class="flip-back absolute w-full h-full bg-purple-800 text-white p-6 rounded-xl border border-purple-400 shadow-lg">
+        <h4 class="text-lg font-semibold mb-3">Review</h4>
+        <ul class="text-sm list-disc pl-4 space-y-2">
+          <li>⭐⭐⭐⭐⭐ Rating</li>
+          <li>Excellent Communication</li>
+          <li>Delivered On Time</li>
+          <li>Highly Recommended</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="flip-card w-72 h-96" data-aos="fade-up" data-aos-duration="900" data-aos-once="true">
+    <div class="flip-inner relative w-full h-full">
+
+      <!-- Front -->
+      <div class="flip-front absolute w-full h-full bg-sky-900 text-white p-6 rounded-xl border border-purple-500 shadow-lg">
+        <img src="images/download.jpg" class="w-16 h-16 rounded-full mx-auto mb-4" alt="">
+        <h3 class="text-xl font-bold">Sara Collins</h3>
+        <p class="text-sm text-purple-300 mb-4">UI Designer</p>
+        <p class="text-sm text-gray-300 text-justify">
+          Excellent service from start to finish. The team was responsive and delivered a product that matched my vision.
+        </p>
+      </div>
+
+      <!-- Back -->
+      <div class="flip-back absolute w-full h-full bg-purple-800 text-white p-6 rounded-xl border border-purple-400 shadow-lg">
+        <h4 class="text-lg font-semibold mb-3">Feedback</h4>
+        <ul class="text-sm list-disc pl-4 space-y-2">
+          <li>⭐⭐⭐⭐ Rating</li>
+          <li>Creative Approach</li>
+          <li>Quick Delivery</li>
+          <li>Will Work Again</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="flip-card w-72 h-96" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+    <div class="flip-inner relative w-full h-full">
+
+      <!-- Front -->
+      <div class="flip-front absolute w-full h-full bg-sky-900 text-white p-6 rounded-xl border border-purple-500 shadow-lg">
+        <img src="images/woman.jpg" class="w-16 h-16 rounded-full mx-auto mb-4" alt="">
+        <h3 class="text-xl font-bold">Emily Roberts</h3>
+        <p class="text-sm text-purple-300 mb-4">Marketing Lead</p>
+        <p class="text-sm text-gray-300 text-justify">
+          Outstanding experience! The final product exceeded all my expectations. Great dedication from the team.
+        </p>
+      </div>
+
+      <!-- Back -->
+      <div class="flip-back absolute w-full h-full bg-purple-800 text-white p-6 rounded-xl border border-purple-400 shadow-lg">
+        <h4 class="text-lg font-semibold mb-3">Highlights</h4>
+        <ul class="text-sm list-disc pl-4 space-y-2">
+          <li>⭐⭐⭐⭐⭐</li>
+          <li>Strong Vision</li>
+          <li>Effective Delivery</li>
+          <li>Professional Team</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</section>
+
     
-    <section class="bg-sky-950 py-8 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-24 text-white overflow-x-hidden">
-       <div class="text-center max-w-lg mx-auto mb-12">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-3">Our Happy Clients
-      </h2>
-      <p class="text-gray-300 text-justify" >
-            We are proud to have worked with a diverse range of clients who trust us to bring their ideas to life. Their satisfaction and positive feedback drive us to keep delivering outstanding results. Your success is our biggest achievement!
-      </p>
-    </div>
+    <!-- <section class="bg-sky-950 py-20 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-24 text-white overflow-x-hidden">
+  <div class="text-center max-w-lg mx-auto mb-12">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-3">Our Happy Clients</h2>
+    <p class="text-gray-300 text-justify mb-4">
+      We are proud to have worked with a diverse range of clients who trust us to bring their ideas to life. Their satisfaction and positive feedback drive us to keep delivering outstanding results. Your success is our biggest achievement!
+    </p>
+  </div>
 
-   <div class="flex flex-col sm:flex-row justify-around items-center flex-wrap gap-4 px-8 py-2">
-     <div class="card max-w-xs px-4 text-center border-4 border-purple-900 rounded-lg drop-shadow-[0_4px_6px_rgba(76,29,149,0.5)] py-4"  data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
-      <img src="images/man3.jpg" class="w-12 h-12 rounded-full block mx-auto" alt="clint-img" loading="lazy">
-      <h2 class="mb-2 text-lg sm:text-2xl">Ahmed Khalil</h2>
+  <div class="flex flex-col sm:flex-row justify-center items-center flex-wrap gap-6 px-4 py-8 mb-16">
+
+    <div class="card max-w-sm px-5 py-8 text-center border border-purple-500 rounded-xl shadow-md bg-sky-900 hover:scale-105 transition-transform duration-300 relative overflow-hidden py-6" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+      <img src="images/man3.jpg" class="w-14 h-14 rounded-full block mx-auto mb-2 z-10 relative" alt="client-img" loading="lazy">
+      <h2 class="mb-2 text-xl font-semibold">Ahmed Khalil</h2>
       <div class="mb-1">
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
       </div>
-     
-      <p class="text-justify">
-      Very professional and timely delivery. I appreciated the clear communication throughout the project. Would definitely work with them again.
+      <p class="text-gray-300 text-justify text-sm z-10 relative">
+        Very professional and timely delivery. I appreciated the clear communication throughout the project. Would definitely work with them again.
       </p>
     </div>
-     <div class="card max-w-xs  px-4 text-center border-4 border-purple-900 rounded-lg drop-shadow-[0_4px_6px_rgba(76,29,149,0.5)] py-4" data-aos="fade-up" data-aos-duration="900" data-aos-once="true">
-      <img src="images/download.jpg" class="w-12 h-12 rounded-full block mx-auto" alt="clint-img" loading="lazy">
-      <h2 class="mb-2 text-lg sm:text-2xl">Sara Collins</h2>
+
+    <div class="card max-w-sm px-5 py-8 text-center border border-purple-500 rounded-xl shadow-md bg-sky-900 hover:scale-105 transition-transform duration-300 relative overflow-hidden py-6" data-aos="fade-up" data-aos-duration="900" data-aos-once="true">
+      <img src="images/download.jpg" class="w-14 h-14 rounded-full block mx-auto mb-2 z-10 relative" alt="client-img" loading="lazy">
+      <h2 class="mb-2 text-xl font-semibold">Sara Collins</h2>
       <div class="mb-1">
-      <i class="fa-regular fa-star"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
+        <i class="fa-regular fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
       </div>
-     
-      <p class="text-justify"> 
-         Excellent service from start to finish. The team was attentive, responsive, and delivered a product that perfectly matched my vision.
+      <p class="text-gray-300 text-justify text-sm z-10 relative">
+        Excellent service from start to finish. The team was attentive, responsive, and delivered a product that perfectly matched my vision.
       </p>
     </div>
-     <div class="card max-w-xs px-4 text-center border-4 border-purple-900 rounded-lg drop-shadow-[0_4px_6px_rgba(76,29,149,0.5)] py-4" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
-      <img src="images/woman.jpg" class="w-12 h-12 rounded-full block mx-auto" alt="clint-img" loading="lazy">
-      <h2 class="mb-2 text-lg sm:text-2xl">Emily Roberts</h2>
+
+    <div class="card max-w-sm px-5 py-8 text-center border border-purple-500 rounded-xl shadow-md bg-sky-900 hover:scale-105 transition-transform duration-300 relative overflow-hidden py-6" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+      <img src="images/woman.jpg" class="w-14 h-14 rounded-full block mx-auto mb-2 z-10 relative" alt="client-img" loading="lazy">
+      <h2 class="mb-2 text-xl font-semibold">Emily Roberts</h2>
       <div class="mb-1">
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
-      <i class="fa-solid fa-star text-purple-600"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
+        <i class="fa-solid fa-star text-purple-500"></i>
       </div>
-     
-      <p class="text-justify">
-         Outstanding experience! The final product was delivered on time and exceeded all my expectations. The team’s dedication truly shows.
+      <p class="text-gray-300 text-justify text-sm z-10 relative">
+        Outstanding experience! The final product was delivered on time and exceeded all my expectations. The team’s dedication truly shows.
+      </p>
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- <section class="relative overflow-hidden text-white">
+  <div class="absolute inset-0 bg-fixed bg-center bg-cover z-0"
+       style="background-image: url(images/bg-parall,ax.jpg.jpg);">
+  </div>
+
+  <div class="absolute inset-0 bg-sky-950 bg-opacity-90 "></div>
+
+  <div class="relative z-20 py-20 px-4 sm:px-8 md:px-8 lg:px-16 xl:px-24">
+    <div class="text-center max-w-lg mx-auto mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3">Our Happy Clients</h2>
+      <p class="text-gray-300 text-justify mb-4">
+        We are proud to have worked with a diverse range of clients who trust us to bring their ideas to life. Their satisfaction and positive feedback drive us to keep delivering outstanding results. Your success is our biggest achievement!
       </p>
     </div>
 
-   
+    <div class="flex flex-col sm:flex-row justify-center items-center flex-wrap gap-6 px-4 py-8 mb-16">
+      
+      <div class="relative group max-w-sm w-full px-5 text-center border border-purple-500 rounded-xl bg-sky-900 
+                  hover:scale-[1.02] transform origin-center transition-transform duration-300 overflow-hidden 
+                  shadow-md py-6 min-h-[320px]">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300  rounded-xl"></div>
+        <img src="images/man3.jpg" class="w-14 h-14 rounded-full block mx-auto mb-2 relative z-10 group-hover:brightness-110 transition duration-300" alt="client-img">
+        <h2 class="mb-2 text-xl font-semibold relative ">Ahmed Khalil</h2>
+        <div class="mb-1 relative z-10">
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+        </div>
+        <p class="text-gray-300 text-justify text-sm relative z-10">
+          Very professional and timely delivery. I appreciated the clear communication throughout the project. Would definitely work with them again.
+        </p>
+      </div>
+
+      <div class="relative group max-w-sm w-full px-5 text-center border border-purple-500 rounded-xl bg-sky-900 
+                  hover:scale-[1.02] transform origin-center transition-transform duration-300 overflow-hidden 
+                  shadow-md py-6 min-h-[320px]">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300 z-0 rounded-xl"></div>
+        <img src="images/download.jpg" class="w-14 h-14 rounded-full block mx-auto mb-2 relative z-10 group-hover:brightness-110 transition duration-300" alt="client-img">
+        <h2 class="mb-2 text-xl font-semibold relative z-10">Sara Collins</h2>
+        <div class="mb-1 relative z-10">
+          <i class="fa-regular fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+        </div>
+        <p class="text-gray-300 text-justify text-sm relative z-10">
+          Excellent service from start to finish. The team was attentive, responsive, and delivered a product that perfectly matched my vision.
+        </p>
+      </div>
+
+      <div class="relative group max-w-sm w-full px-5 text-center border border-purple-500 rounded-xl bg-sky-900 
+                  hover:scale-[1.02] transform origin-center transition-transform duration-300 overflow-hidden 
+                  shadow-md py-6 min-h-[320px]">
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300 z-0 rounded-xl"></div>
+        <img src="images/woman.jpg" class="w-14 h-14 rounded-full block mx-auto mb-2 relative z-10 group-hover:brightness-110 transition duration-300" alt="client-img">
+        <h2 class="mb-2 text-xl font-semibold relative z-10">Emily Roberts</h2>
+        <div class="mb-1 relative z-10">
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+          <i class="fa-solid fa-star text-purple-500"></i>
+        </div>
+        <p class="text-gray-300 text-justify text-sm relative z-10">
+          Outstanding experience! The final product was delivered on time and exceeded all my expectations. The team’s dedication truly shows.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section> -->
 
 
 
 
 
-   </div>
-    </section>
+
 
    
 <section class="min-h-screen flex items-center justify-center bg-sec px-4 sm:px-6 lg:px-8 bg-sec overflow-x-hidden" id="contact">
   <div class="relative w-full max-w-md rounded-xl overflow-hidden shadow-lg">
 
+    <!-- الخلفية فيديو -->
     <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
       <source src="images/waves_-_22183 (540p).mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
+    <!-- غطاء شفاف فوق الفيديو -->
     <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
 
-    <form class="relative z-10 p-6 sm:p-8 text-white space-y-4">
+    <!-- نموذج التواصل -->
+    <form onsubmit="submitContact(event)" class="relative z-10 p-6 sm:p-8 text-white space-y-4">
       <h2 class="text-2xl font-bold text-center mb-4">Contact Us</h2>
 
-      <input type="text" placeholder="Enter Your Name" class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none py-2" />
-      <input type="email" placeholder="Enter Your Email" class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none py-2" />
-      <input type="tel" placeholder="Phone Number" class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none py-2" />
-      <textarea placeholder="Send Message" class="w-full bg-transparent border border-white rounded-md placeholder-white focus:outline-none py-2 px-3 resize-none h-32"></textarea>
+      <input type="text" id="name" required placeholder="Enter Your Name"
+             class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none py-2" />
 
-     <div class=" flex items-center justify-center">
-  <button type="submit" class="w-auto bg-white text-black font-semibold py-2 px-10 rounded-md hover:bg-cyan-700 hover:text-white transition duration-300">
-    Submit
-  </button>
-</div>
+      <input type="email" id="email" required placeholder="Enter Your Email"
+             class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none py-2" />
 
+      <input type="tel" id="phone" required placeholder="Phone Number"
+             class="w-full bg-transparent border-b border-white placeholder-white focus:outline-none py-2" />
 
+      <textarea id="message"  placeholder="Send Message"
+                class="w-full bg-transparent border border-white rounded-md placeholder-white focus:outline-none py-2 px-3 resize-none h-32"></textarea>
+
+      <div class="flex items-center justify-center">
+        <button type="submit"
+                class="w-auto bg-white text-black font-semibold py-2 px-10 rounded-md hover:bg-cyan-700 hover:text-white transition duration-300">
+          Submit
+        </button>
+      </div>
+
+      <!-- رسالة نجاح -->
+      <p id="successMessage" class="text-green-300 text-center hidden">✅ Message sent successfully!</p>
     </form>
   </div>
 </section>
+
 <button id="toTopBtn" class="hidden fixed bottom-4 right-4 bg-blue-600 text-white w-10 h-10 rounded-full shadow-lg">
   <span id="scrollPercent">0%</span>
 </button>
@@ -338,6 +550,8 @@
 <footer>
   <h5 class="bg-sky-950 text-blue-500 px-4 py-1.5">Developed With Love by <a href="https://www.facebook.com/ahmedanany.393/">Ahmed Anani </a>@2025</h5>
 </footer>
+
+
 
 
 
