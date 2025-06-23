@@ -181,7 +181,7 @@
       <p class="mb-4 text-justify">
            Perfect for startups! Get a clean, modern design, 1-month free hosting, and 24/7 support to kick-start your online presence.
       </p>
-      <button type="button" onclick="openModal()" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
+      <button type="button" onclick="openModal()"  class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
          hover:bg-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 
          focus-visible:outline-cyan-600 transition duration-500 ease-in-out">
         Book Now
@@ -204,7 +204,7 @@
       <p class="mb-4 text-justify">
            Upgrade your brand with advanced features like SEO optimization, fast performance, and social media integration – ideal for growing businesses.
       </p>
-      <button type="button" onclick="openModal()" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
+      <button type="button" onclick="openModal()"  class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
          hover:bg-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 
          focus-visible:outline-cyan-600 transition duration-500 ease-in-out">
         Book Now
@@ -219,7 +219,7 @@
       <p class="mb-4 text-justify">
          Go premium with a fully customized website, priority support, and in-depth analytics. This package is built for businesses that want to lead and dominate their market.
       </p>
-      <button type="button" onclick="openModal()" class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
+      <button type="button"  onclick="openModal()"  class="mt-4 inline-block rounded-md bg-black px-4 py-3 text-sm font-semibold text-white shadow-xs 
          hover:bg-cyan-800 focus-visible:outline-2 focus-visible:outline-offset-2 
          focus-visible:outline-cyan-600 transition duration-500 ease-in-out">
         Book Now
@@ -233,29 +233,46 @@
 </div>
 
  <!-- Booking Modal -->
-  <div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden justify-center items-center">
-    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-black relative">
-      <button onclick="closeModal()" class="absolute top-2 right-3 text-xl font-bold text-gray-600 hover:text-red-500">&times;</button>
-      <h2 class="text-2xl font-semibold mb-4">Book Your Package</h2>
-      <form onsubmit="submitBooking(event)">
-        <label class="block mb-2 text-sm font-medium">Your Name</label>
-        <input type="text" required class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter your name">
+<div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden justify-center items-center">
+  <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full text-black relative">
+    <button onclick="closeModal()" class="absolute top-2 right-3 text-xl font-bold text-gray-600 hover:text-red-500">&times;</button>
+    
+    <h2 class="text-2xl font-semibold mb-4">Book Your Package</h2>
+    
+    <form onsubmit="submitBooking(event)">
+      <!-- الاسم -->
+      <label class="block mb-2 text-sm font-medium">Your Name</label>
+      <input type="text" required class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter your name">
 
-        <label class="block mb-2 text-sm font-medium">Email</label>
-        <input type="email" required class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter your email">
+      <!-- البريد -->
+      <label class="block mb-2 text-sm font-medium">Email</label>
+      <input type="email" required class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Enter your email">
 
-        <label class="block mb-2 text-sm font-medium">Package</label>
-        <select required class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
-          <option>Package 1</option>
-          <option>Package 2</option>
-          <option>Package 3</option>
-        </select>
+      <!-- اختيار الباقة -->
+      <label class="block mb-2 text-sm font-medium">Package</label>
+      <select id="packageSelect" onchange="updatePrice()" required class="w-full px-4 py-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+        <option value="">-- Choose Package --</option>
+        <option value="Package 1">Package 1</option>
+        <option value="Package 2">Package 2</option>
+        <option value="Package 3">Package 3</option>
+      </select>
 
-        <button type="submit" class="w-full bg-purple-700 text-white py-2 rounded-md hover:bg-purple-800 transition">Submit Booking</button>
-        <p id="successMsg" class="text-green-600 text-sm mt-2 hidden text-center">✅ Booking submitted successfully!</p>
-      </form>
-    </div>
+      <!-- عرض السعر -->
+      <p id="displayPrice" class="text-purple-700 font-semibold mb-4"></p>
+
+      <!-- بيانات مخفية للتخزين -->
+      <input type="hidden" id="selectedPackage" name="selectedPackage">
+      <input type="hidden" id="selectedPrice" name="selectedPrice">
+
+      <!-- زر الإرسال -->
+      <button type="submit" class="w-full bg-purple-700 text-white py-2 rounded-md hover:bg-purple-800 transition">Submit Booking</button>
+
+      <!-- رسالة نجاح -->
+      <p id="successMsg" class="text-green-600 text-sm mt-2 hidden text-center">✅ Booking submitted successfully!</p>
+    </form>
   </div>
+</div>
+
 
      
         

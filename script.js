@@ -122,33 +122,48 @@ document.getElementById("toTopBtn").addEventListener("click", () => {
 });
 
 
-    function openModal() {
-      const modal = document.getElementById('bookingModal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
+    const packagePrices = {
+    "Package 1": "EGP 1500",
+    "Package 2": "EGP 2500",
+    "Package 3": "EGP 3800"
+  };
 
-    function closeModal() {
-      const modal = document.getElementById('bookingModal');
-      modal.classList.remove('flex');
-      modal.classList.add('hidden');
-    }
+  function openModal() {
+    const modal = document.getElementById('bookingModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
 
-    function submitBooking(event) {
-      event.preventDefault();
+  function closeModal() {
+    const modal = document.getElementById('bookingModal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+  }
 
-      // Show success message
-      document.getElementById("successMsg").classList.remove("hidden");
+  function updatePrice() {
+    const select = document.getElementById("packageSelect");
+    const selected = select.value;
+    const price = packagePrices[selected] || "";
 
-      // Reset form fields
-      event.target.reset();
+    document.getElementById("displayPrice").innerText = price ? `Price: ${price}` : "";
 
-      // Hide modal after 2.5s
-      setTimeout(() => {
-        document.getElementById("successMsg").classList.add("hidden");
-        closeModal();
-      }, 2500);
-    }
+    document.getElementById("selectedPrice").value = price;
+    document.getElementById("selectedPackage").value = selected;
+  }
+
+  function submitBooking(event) {
+    event.preventDefault();
+
+    document.getElementById("successMsg").classList.remove("hidden");
+
+    event.target.reset();
+    document.getElementById("displayPrice").innerText = "";
+
+    setTimeout(() => {
+      document.getElementById("successMsg").classList.add("hidden");
+      closeModal();
+    }, 2500);
+  }
 
 
 
